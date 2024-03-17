@@ -55,7 +55,7 @@ const handleMultiSelection=(uniqueID)=>{
 
           <div className="wrapper  ">
             {AccordData.map((item)=>{
-              return <div  onClick={enableMulti? ()=> handleMultiSelection(item.id): ()=> handleSingalSelect(item.id)} className="container  cursor-pointer p-6 flex-col gap-4 shadow-lg rounded-md hover:bg-blue-900 transition-all duration-300 ease-in-out bg-blue-950 flex text-white my-3 max-w-80">
+              return <div  onClick={enableMulti? ()=> handleMultiSelection(item.id): ()=> handleSingalSelect(item.id)} className="container  cursor-pointer p-6 flex-col gap-4 shadow-lg rounded-md hover:bg-blue-900 transition-all duration-300 ease-in-out bg-blue-950 flex text-white my-3 w-80 max-w-80">
                 <div className="questionare gap-4   flex justify-between">
                   <div  className="question transition-all ease-in-out duration-1000" key={item.id}>{item.question}</div>
                   <span className={`${selected===item.id || multi.findIndex((element=>element===item.id)) !== -1?'rotate-180':''} transition ease-out duration-500` }><IoIosArrowDown/></span>
